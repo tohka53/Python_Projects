@@ -7,6 +7,7 @@ hijo_del_dueño = respuesta_hijo =="si"
 
 puede_pasar =masDe12 or hijo_del_dueño
 
+
 if edad > puede_pasar:
     print("Puede Ingresar a la montraña rusa")
 else:
