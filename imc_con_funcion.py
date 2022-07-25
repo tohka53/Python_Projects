@@ -21,5 +21,5 @@ def pedir_IMC():
         print("Obesidad")
 
 
-print("Calcular IMC")
+print("Calcular Primer IMC ")
 pedir_IMC()
