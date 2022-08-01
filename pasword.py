@@ -15,4 +15,4 @@ password_text = 8
 
 password = "".join(random.sample(use_for,password_text) )
 
-print("Tu contraseña es:  "+  password)
+print(password)
