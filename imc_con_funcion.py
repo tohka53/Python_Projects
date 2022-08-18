@@ -1,6 +1,6 @@
 
 def calcular_IMC(peso, alturaMetros):
-   imc = peso/(alturaMetros*alturaMetros)
+   imc = peso/(alturaMetros**2)
    return imc
 
 def pedir_IMC():
