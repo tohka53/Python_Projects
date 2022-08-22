@@ -25,10 +25,16 @@ choise_1= input('Te encuentras en un laberinto, donde deseas ir? Escribe "Left" 
 
 
 if choise_1 =='left':
-    choise2 = input('Has llegado al lago escribe "Wait" para esperar el bote o "Swim" para nadar atravez del lago').lower
-        if choise2 == 'Wait':
-            choise3 = input('')
-if choise_1 =='rigth':
-    print('GAME OVER')
+    choise2 = input('Has llegado al lago escribe "Wait" para esperar el bote o "Swim" para nadar atravez del lago').lower()
+    if choise2 == 'Wait':
+        choise3 = input('Casi llegas a tu destino deseas usar la llave escribe "Key" o si deseas usar la palabra secreta escribe "Word"').lower()
+        print('Ten cuidado con tu descicion')
+        if choise3 == 'Word':
+            print('Felicidades has encotrado el tesoro')
+        else:
+            print('GAME OVER')
+    else:
+        print('GAME OVER')
 else:
+    print('GAME OVER')
 
