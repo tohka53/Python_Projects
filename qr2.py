@@ -1,21 +1,19 @@
-#Import module
-import qrcode
+import pyqrcode
 
+import png
+from PIL import Image
 
-print("QR CODE GENERATOR")
-a= input("Enter link which you of want to make qr code")
-#set QR code parameteres
-qr = qrcode.QRCode(
-    version = 10,
-    box_size = 5,
-    border = 1
-)
-#storing input given into data variable
-data = a
-qr.add_data(data)
-#Generate QR Code
-qr.make(fit = True)
-#set QR code properties
-img = qr.make_image(fill="black",back_color = "white")
-#save QR code
-img.save("QrCodeImage.png")
+#inserting website name
+s = input("Enter your website: ") 
+print(s)
+url = pyqrcode.create(s)
+
+#saving image
+img = "qr-code.png"
+url.png(img, scale=10)
+
+#opening image
+im=Image.open(img)
+
+#show
+im
