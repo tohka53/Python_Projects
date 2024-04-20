@@ -1,0 +1,21 @@
+def SearchingChallenge(strArr):
+    # __define-ocg__: Crear un diccionario para almacenar los pares clave-valor
+    varOcg = {}
+
+    for pair in strArr:
+        key, value = pair.split(':')
+        value = int(value)
+
+        # Si la clave ya existe en el diccionario, sumar el valor. Si no, agregar la clave y el valor.
+        if key in varOcg:
+            varOcg[key] += value
+        else:
+            varOcg[key] = value
+
+    # Eliminar las claves con valor 0
+    varOcg = {k: v for k, v in varOcg.items() if v != 0}
+
+    # Construir la cadena de salida con las claves ordenadas alfabéticamente
+    output = ','.join(f'{k}:{v}' for k, v in sorted(varOcg.items()))
+
+    return output
